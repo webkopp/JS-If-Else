@@ -7,14 +7,13 @@
 // Lass Dir das Ergebnis der Funktion im HTML in “Volljährig” oder “Minderjährig” ausgeben.
 
 function adult() {
-    let age = document.getElementById("#ageInput").value;
-    let output = document.querySelector("#output");
-
-    if (age >= 18) {
-    console.log("volljährig");
-    output.innerHTML = "Volljährig";
+    let age = document.querySelector("#ageInput").value
+    let output = document.querySelector("#message")
+    if(age >= 18) {
+        output.innerHTML = "Volljährig"
+        console.log(true);
     } else {
-    console.log("minderjährig");
-    output.innerHTML = "Minderjährig.";
+        output.innerHTML = "Minderjährig"
+        console.log(false);
     }
 }
