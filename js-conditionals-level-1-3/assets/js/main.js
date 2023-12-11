@@ -6,15 +6,19 @@
 // Ist das eingegebene Alter kleiner als 18, gib false zurück.
 // Lass Dir das Ergebnis der Funktion im HTML in “Volljährig” oder “Minderjährig” ausgeben.
 
-function adult() {
-    let age = document.getElementById("#ageInput").value;
-    let output = document.querySelector("#output");
+let output = document.querySelector("body")
+    output.innerHTML += `<p id="output"></p>`
 
-    if (age >= 18) {
-    console.log("volljährig");
-    output.innerHTML = "Volljährig";
+function AltersFreigabe() {
+    let age = document.querySelector("#input").value
+    let output = document.querySelector("#output")
+
+    if(age >= 18) {
+        output.innerHTML = "Du darfst Shisha rauchen."
+        console.log(true);
     } else {
-    console.log("minderjährig");
-    output.innerHTML = "Minderjährig.";
+        output.innerHTML = "Du darfst noch nicht Shisha rauchen."
+        console.log(false);
+        event.preventDefault()
     }
 }
